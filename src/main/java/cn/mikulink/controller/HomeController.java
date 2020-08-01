@@ -6,18 +6,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
  * @author MikuLink
- * 2020/7/29 10:51
+ * 2020/8/1 10:51
  * For the Reisen!
- * 欢迎页面
+ * 主页
  */
 @Controller
-public class IndexController {
+public class HomeController {
 
     /**
-     * 欢迎页面
+     * 网站主页
      */
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
-        return "index";
+        return "home";
     }
 }
