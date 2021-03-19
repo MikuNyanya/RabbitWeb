@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <title>error page</title>
+</head>
+<body>
+<div class="wrap">
+    <div class="panel-l container clearfix">
+        <div class="error">
+            <p class="title"><span class="code" text="${status}"></span>非常抱歉，没有找到您要查看的页面</p>
+            <a href="/" class="btn-back common-button">返回首页
+                <img class="logo-back" src="/img/back.png">
+            </a>
+            <div class="common-hint-word">
+                <div text="${#dates.format(timestamp,'yyyy-MM-dd HH:mm:ss')}"></div>
+                <div text="${messages}"></div>
+                <div text="${error}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
