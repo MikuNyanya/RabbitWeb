@@ -1,6 +1,6 @@
 package cn.mikulink.rabbitweb.filemanager;
 
-import cn.mikulink.rabbitweb.controller.IndexController;
+import cn.mikulink.rabbitweb.controller.RabbitClickerController;
 import cn.mikulink.rabbitweb.entity.RabbitWebDataInfo;
 import cn.mikulink.rabbitweb.utils.FileUtil;
 import com.alibaba.fastjson.JSONObject;
@@ -76,7 +76,7 @@ public class FileManagerData {
             //读取数据
             RabbitWebDataInfo rabbitWebDataInfo = loadFile();
             if (null != rabbitWebDataInfo) {
-                IndexController.setClickCount(rabbitWebDataInfo.getClickCount());
+                RabbitClickerController.setClickCount(rabbitWebDataInfo.getClickCount());
             }
 
         } catch (Exception ex) {

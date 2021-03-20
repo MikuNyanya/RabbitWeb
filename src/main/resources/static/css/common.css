@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+a, img {
+    border: 0;
+}
+
+body {
+    font: 12px/180% Arial, Helvetica, sans-serif, "新宋体";
+    background-color: black;
+    background-size: 100%, 100%;
+    background-attachment: fixed;
+    background-image: url("/static/images/38578032_0.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#div_bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    filter: alpha(Opacity=80);
+    -moz-opacity: 0.8;
+    opacity: 0.8;
+    z-index: -1;
+}

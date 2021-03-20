@@ -1,6 +1,7 @@
 package cn.mikulink.rabbitweb.config;
 
 import cn.mikulink.rabbitweb.controller.IndexController;
+import cn.mikulink.rabbitweb.controller.RabbitClickerController;
 import cn.mikulink.rabbitweb.entity.RabbitWebDataInfo;
 import cn.mikulink.rabbitweb.filemanager.FileManagerData;
 import org.springframework.scheduling.annotation.EnableAsync;
@@ -21,7 +22,7 @@ public class ScheduleTask {
     @Scheduled(cron = "0 * * * * ?")
     private void syncClickCountTask() {
         RabbitWebDataInfo info = new RabbitWebDataInfo();
-        info.setClickCount(IndexController.getClickCount());
+        info.setClickCount(RabbitClickerController.getClickCount());
         try {
             FileManagerData.writeFile(info);
         }catch (Exception ex){
