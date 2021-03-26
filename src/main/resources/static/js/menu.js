@@ -1,7 +1,8 @@
 //代码来源：https://www.jq22.com/jquery-info771
 
 var PathStatus 	= 0;
-var angle 		= Math.PI/((4-1)*2);	
+var PathItemCount = 4;	//小图总数量，按照目前大小，最多5个，就比较挤了
+var angle 		= Math.PI/((PathItemCount-1)*2);
 var mainButton 	= [
 	{'bg':'../images/bg-2x.png','css':'','cover':'../images/menu_rabbit.png','html':'<span class="cover"></span>'},
 	{'bg':'','css':'','cover':'','html':'','angle':-405,'speed':200}
@@ -16,7 +17,7 @@ var InSpeed 	= 480;		//小图进去的速度
 var InIncr 		= -80;		//小图进去的旋转
 function PathRun(){
 	var PathMenu = $('#PathMenu');
-	var PathItems = PathMenu.children('.PathItem').slice(0,4);
+	var PathItems = PathMenu.children('.PathItem').slice(0,PathItemCount);
 	if(PathStatus == 0){
 		var Count = PathItems.size();
 		PathItems.each(function(SP){
@@ -122,13 +123,18 @@ function menuInit(){
 		"        </a>\n" +
 		"    </div>\n" +
 		"    <div class=\"PathItem\">\n" +
-		"        <a class=\"link\" href=\"/rabbitclicker\" title=\"点兔子\">\n" +
-		"            <span class=\"item\" style=\"background-image:url(static/images/moment_icn_info.png);\"></span>\n" +
+		"        <a class=\"link\" href=\"/rabbitclicker\" title=\"鼠标毁灭兔\">\n" +
+		"            <span class=\"item\" style=\"background-image:url(static/images/menu_clicker.png);\"></span>\n" +
 		"        </a>\n" +
 		"    </div>\n" +
 		"    <div class=\"PathItem\">\n" +
 		"        <a class=\"link\" href=\"#\" title=\"\">\n" +
 		"            <span class=\"item\" style=\"background-image: url(static/images/moment_icn_address.png);\"></span>\n" +
+		"        </a>\n" +
+		"    </div>\n" +
+		"    <div class=\"PathItem\">\n" +
+		"        <a class=\"link\" href=\"#\">\n" +
+		"            <span class=\"item\" style=\"background-image: url(static/images/moment_icn_price.png);\"></span>\n" +
 		"        </a>\n" +
 		"    </div>\n" +
 		"    <div class=\"PathItem\">\n" +

@@ -1,6 +1,7 @@
 var clickCountBefore = 0;
 var clickCountAfter = 0;
 var clickCountAfterTemp = 0;
+var clickCountLocalTotal = 0;
 
 $(document).ready(function () {
     // 初始化菜单
@@ -18,6 +19,7 @@ $(document).ready(function () {
 
 function syncClickCount() {
     clickCountAfter = clickCountAfterTemp;
+    clickCountLocalTotal += clickCountAfterTemp;
     clickCountAfterTemp = 0;
 
     $.post("rabbitclicker/syncClickCount", {clickCountAfter: clickCountAfter}, function (data, status) {
@@ -25,4 +27,8 @@ function syncClickCount() {
         clickCountBefore = dataJson.clickCount;
         $("#span_clickCount").html(clickCountBefore);
     })
+
+    if(0<clickCountLocalTotal<=50){
+
+    }
 }

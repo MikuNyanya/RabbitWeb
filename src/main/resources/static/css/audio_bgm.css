@@ -1,10 +1,7 @@
-#div_main {
+#audio_bgm {
     position: absolute;
-    top: 100px;
-    left: 200px;
-    width: 1280px;
-    height: 720px;
-    background-color: white;
+    right: 0;
+    top: 0;
     filter: alpha(Opacity=50);
     -moz-opacity: 0.5;
     opacity: 0.5;
